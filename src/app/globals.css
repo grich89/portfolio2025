@@ -1,12 +1,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --black: #000;
+  --white: #fff;
+  --accent: #5b659f;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --abril: "Abril Fatface", serif;
+    --poppins: "Poppins", sans-serif;
   }
 }
 
@@ -16,12 +22,23 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: var(--font-abril-fatface);
+}
+
 body {
   color: var(--foreground);
+  font-family: var(--font-poppins), sans-serif;
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 * {
@@ -33,6 +50,153 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+ 
+.btn:hover .btn-slide-show-text1 {
+  margin-left: 65px;
+} 
+ 
+.btn-text-stretch {
+  letter-spacing: 0px;
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 250px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+} 
+ 
+.btn-text-stretch:hover {
+  letter-spacing: 7px;
+} 
+ 
+.btn-text-stretch::before {
+  backface-visibility: hidden;
+  border: 1px solid transparent;
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0px auto;
+  position: relative;
+  transition: 0.4s ease-in-out;
+  width: 0px;
+} 
+
+.btn-text-stretch::after {
+  backface-visibility: hidden;
+  border: 1px solid transparent;
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0px auto;
+  position: relative;
+  transition: 0.4s ease-in-out;
+  width: 0px;
+} 
+ 
+.btn-text-stretch:hover::before {
+  backface-visibility: hidden;
+  transition: width 0.5s ease-in-out;
+  width: 70%;
+  bottom: auto;
+  top: 0px;
+  width: 70%;
+} 
+
+.btn-text-stretch:hover::after {
+  backface-visibility: hidden;
+  transition: width 0.5s ease-in-out;
+  width: 70%;
+  bottom: auto;
+  top: 0px;
+  width: 70%;
+} 
+ 
+.btn-text-stretch--gray:hover::before {
+  border-color: var(--accent);
+} 
+
+.btn-text-stretch--gray:hover::after {
+  border-color: var(--accent);
+} 
+
+/* Swiper Styles */
+.swiper {
+  opacity: 0;
+}
+
+.swiper-slide div {
+  opacity: 0.25;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.75);
+  pointer-events: none;
+  touch-action: none;
+}
+
+.swiper-slide-prev > div {
+  transform: scale(0.75);
+}
+
+.swiper-slide-next > div {
+  transform: scale(0.75);
+}
+
+.swiper-slide-active > div {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  transform: none; 
+  pointer-events: all;
+  touch-action: auto;
+}
+
+.swiper-slide p,
+.swiper-slide h2,
+.swiper-slide ul {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.swiper-slide-active p,
+.swiper-slide-active h2,
+.swiper-slide-active ul {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease-in-out; 
+  transition-delay: 0.25s;
+}
+
+.swiper-header-pagination {
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: 1px solid var(--black);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--black);
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--black);
+  }
 }
 
 @media (prefers-color-scheme: dark) {

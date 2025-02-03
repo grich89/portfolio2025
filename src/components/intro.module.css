@@ -1,0 +1,63 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px var(--side-padding) 0;
+
+  @media (min-width: 1000px) {
+    padding: 40px 5% 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    font-family: var(--font-poppins);
+    gap: 2rem;
+  }
+
+  .navItem {
+    background:
+      linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 1)
+      ),
+      linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(91,101,159, 1)
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+    letter-spacing: 1px;
+    font-size: 18px;
+    
+    &:hover {
+      color: var(--accent);
+      background-size: 0 3px, 100% 3px;
+    }
+  }
+
+  .activeNavItem {
+    color: var(--accent);
+    background-size: 0 3px, 100% 3px;
+  }
+
+  .pagination {
+    position: relative;
+    margin-left: auto;
+
+    > div {
+      display: flex;
+      justify-content: center;
+      gap: 0.25rem;
+
+      @media (min-width: 1000px) {
+        gap: 1rem;
+      }
+    }
+  }
+}
