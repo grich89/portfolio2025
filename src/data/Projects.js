@@ -6,7 +6,7 @@ const Projects = [
       name: "Honorable Mention: aWWWards",
       url: "https://www.awwwards.com/sites/fernet-branca-us"
     }],
-    imageSrc: "/fernet.webp",
+    imageSrc: "/fernet2.webp",
     url: "https://www.awwwards.com/sites/fernet-branca-us"
   },
   {
