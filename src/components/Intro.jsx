@@ -3,13 +3,14 @@
 import Link from "next/link";
 import styles from "./intro.module.css";
 import { useRef, useEffect } from "react";
-import { usePathname } from "next/navigation";
-
+import { usePathname, useRouter } from "next/navigation";
 import gsap from "gsap";
 
 export default function Intro() {
   let path = usePathname();
   const headerRef = useRef(null);
+
+  const router = useRouter();
 
   useEffect(() => {
     if (!headerRef.current) {
@@ -33,18 +34,33 @@ export default function Intro() {
     });
   }, []);
 
+  const handleTransitionClick = (e) => {
+    e.preventDefault();
+    const href = e.target.getAttribute("href");
+
+    gsap.to("main", {
+      duration: 0.5,
+      opacity: 0,
+      onComplete: () => {
+        router.push(href);
+      }
+    });
+  }
+
   return (
     <header className={styles.intro} ref={headerRef}>
       <nav className={styles.nav}>
         <Link
           href="/"
           className={`${styles.navItem} ${path === "/" ? styles.activeNavItem : ""}`}
+          onClick={(e) => { handleTransitionClick(e); }}
         >
           Work
         </Link>
         <Link
           href="/about"
           className={`${styles.navItem} ${path === "/about" ? styles.activeNavItem : ""}`}
+          onClick={(e) => { handleTransitionClick(e) }}
         >
           About
         </Link>

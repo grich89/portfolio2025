@@ -9,9 +9,9 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <div className={styles.container}>
+      <main>
         <Bio />
-      </div>
+      </main>
     </>
   );
 }
