@@ -1,9 +1,10 @@
 .bio {
   margin-top: auto;
-  max-width: 668px;
+  max-width: 900px;
   margin: 0 auto;
   padding: var(--component-padding) var(--side-padding);
-  
+  text-align: center;
+
   .title {
     margin-bottom: 1rem;
     font-size: 64px;
@@ -12,6 +13,7 @@
 
 .social {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
 
