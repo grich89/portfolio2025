@@ -41,7 +41,6 @@ h1, h2 {
 
 
 h2 {
-  margin-top: -0.25rem;
   font-size: 22px;
   line-height: 1;
 
@@ -79,7 +78,6 @@ body {
 
 main {
   margin-top: auto;
-  transition: 0.4s all ease-in-out;
 }
 
 * {
