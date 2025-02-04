@@ -79,6 +79,7 @@ body {
 
 main {
   margin-top: auto;
+  transition: 0.4s all ease-in-out;
 }
 
 * {

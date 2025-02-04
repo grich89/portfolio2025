@@ -87,6 +87,8 @@
     font-family: var(--font-poppins);
     text-transform: uppercase;
     font-size: 12px;
+    display: inline-flex;
+    text-align: center;
 
     &:hover {
       background: var(--accent);
