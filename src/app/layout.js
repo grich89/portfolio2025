@@ -6,12 +6,14 @@ import Footer from "@/components/Footer";
 
 const abrilFatface = Abril_Fatface({
   variable: "--font-abril-fatface",
-  weight: '400'
+  weight: '400',
+  subsets: ['latin']
 });
 
 const poppins = Poppins({
   variable: "--font-poppins",
-  weight: ['400', '700']
+  weight: ['400', '700'],
+  subsets: ['latin']
 });
 
 export const metadata = {

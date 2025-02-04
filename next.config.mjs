@@ -2,9 +2,10 @@
 const nextConfig = {
   output: "export",  // <=== enables static exports
   reactStrictMode: true,
-  basePath: "/portfolio2025",
+  basePath: '/portfolio2025',
   images: {
-    unoptimized: true
+    unoptimized: true,
+    path: '/portfolio2025/_next/image',
   }
 };
 

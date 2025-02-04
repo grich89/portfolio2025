@@ -48,7 +48,7 @@ const Bio = () => {
 
   return (
     <div className={styles.bio}>
-      <h1 ref={titleRef}>About</h1>
+      <h1 className={styles.title} ref={titleRef}>About</h1>
 
       <div ref={bioRef}>
         <p>
@@ -67,12 +67,12 @@ const Bio = () => {
       </div>
 
       <div className={styles.social} ref={socialRef}>
-        <Link target="_blank" href="https://www.linkedin.com/in/gregory-rich-7935b522/" rel="noopener noreferrer">
-          <LinkedIn />
+        <Link target="_blank" href="https://www.linkedin.com/in/gregory-rich-7935b522/" rel="noopener noreferrer" className={styles.socialLink}>
+          <LinkedIn className={styles.svg} />
         </Link>
 
-        <Link target="_blank" href="https://github.com/grich89" rel="noopener noreferrer">
-          <Github />
+        <Link target="_blank" href="https://github.com/grich89" rel="noopener noreferrer" className={styles.socialLink}>
+          <Github className={styles.svg} />
         </Link>
       </div>
     </div>

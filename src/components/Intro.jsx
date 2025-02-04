@@ -35,7 +35,7 @@ export default function Intro() {
 
   return (
     <header className={styles.intro} ref={headerRef}>
-      <nav>
+      <nav className={styles.nav}>
         <Link
           href="/"
           className={`${styles.navItem} ${path === "/" ? styles.activeNavItem : ""}`}
@@ -51,7 +51,7 @@ export default function Intro() {
       </nav>
       
       <div className={styles.pagination}>
-        <div className="swiper-header-pagination"></div>
+        <div className={`swiper-header-pagination ${styles.paginationContainer}`}></div>
       </div>
     </header>
   );

@@ -4,33 +4,9 @@
   margin: 0 auto;
   padding: var(--component-padding) var(--side-padding);
   
-  h1 {
+  .title {
     margin-bottom: 1rem;
     font-size: 64px;
-  }
-
-  a {
-    background:
-      linear-gradient(
-        to right,
-        rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 1)
-      ),
-      linear-gradient(
-        to right,
-        rgba(255, 0, 0, 1),
-        rgba(255, 0, 180, 1),
-        rgba(91,101,159, 1)
-    );
-    background-size: 100% 3px, 0 3px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 400ms;
-    
-    &:hover {
-      color: var(--accent);
-      background-size: 0 3px, 100% 3px;
-    }
   }
 }
 
@@ -39,16 +15,16 @@
   gap: 1rem;
   margin-top: 2rem;
 
-  svg {
+  .svg {
     width: 35px;
     height: 35px;
-  }
-
-  a {
-    background: transparent;
 
     &:hover {
       transform: scale(1.1);
     }
+  }
+
+  .socialLink {
+    background: transparent;
   }
 }

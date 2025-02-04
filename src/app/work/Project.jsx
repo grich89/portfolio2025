@@ -23,33 +23,34 @@ const Project = forwardRef(({
 
   return (
     <li ref={ref} className={styles.project}>
-      <footer>
+      <footer className={styles.projectInfo}>
         <h2>
-          <Link href={url} target="_blank" rel="noopener noreferrer">
+          <Link href={url} target="_blank" rel="noopener noreferrer" className={styles.title}>
             <span ref={titleRef}>{title}</span>
           </Link>
         </h2>
         {pills && (
-          <ul>
+          <ul className={styles.pills}>
             {pills.map((pill, index) => (
-              <li key={index}>
-                <Link href={pill.url} target="_blank" rel="noopener noreferrer">{pill.name}</Link>
+              <li key={index} className={styles.pill}>
+                <Link href={pill.url} target="_blank" rel="noopener noreferrer" className={styles.pillLink}>{pill.name}</Link>
               </li>
             ))}
           </ul>
         )}
       </footer>
-      <header>
+      <header className={styles.projectMedia}>
         {imageSrc ? (
           <Link 
             target="_blank"
             rel="noopener noreferrer"
             href={url} passHref>
             <Image
-              src={imageSrc}
+              src={`/portfolio2025/${imageSrc}`}
               alt={title}
               width={800}
               height={450}
+              className={styles.image}
             />
           </Link>
         ) : vimeoid && (
@@ -60,6 +61,7 @@ const Project = forwardRef(({
             frameBorder="0"
             allow="autoplay; fullscreen"
             allowFullScreen
+            className={styles.video}
           />
         )}
       </header>
