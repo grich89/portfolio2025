@@ -61,7 +61,7 @@
     gap: 1rem;
     height: 115px;
 
-    @media (min-width: 1000px) {
+    @media (min-width: 1250px) {
       flex-direction: row;
       justify-content: space-between;
       height: unset;
