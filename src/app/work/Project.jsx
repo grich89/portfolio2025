@@ -46,7 +46,7 @@ const Project = forwardRef(({
             rel="noopener noreferrer"
             href={url} passHref>
             <Image
-              src={`/portfolio2025/${imageSrc}`}
+              src={`${imageSrc}`}
               alt={title}
               width={800}
               height={450}
