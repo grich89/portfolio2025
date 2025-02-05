@@ -92,7 +92,7 @@
 
     &:hover {
       background: var(--accent);
-      color: #fff;
+      color: var(--white);
     }
   }
 }

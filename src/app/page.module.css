@@ -180,6 +180,7 @@ a.secondary {
     font-family: var(--font-poppins);
     width: 100%;
     text-align: center;
+    color: var(--foreground);
 
     &:hover {
       color: var(--accent);
@@ -198,6 +199,14 @@ a.secondary {
 .footer img {
   flex-shrink: 0;
 }
+/* 
+.footer a {
+  color: var(--white);
+
+  &:hover {
+    color: var(--accent);
+  }
+} */
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -244,11 +253,5 @@ a.secondary {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
   }
 }

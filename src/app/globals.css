@@ -181,4 +181,12 @@ a {
   html {
     color-scheme: dark;
   }
+
+  :root {
+    --background: #000;
+    --foreground: #fff;
+    --black: #fff;
+    --white: #000;
+    --accent: #FF96CA;
+  }
 }
