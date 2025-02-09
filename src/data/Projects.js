@@ -40,6 +40,15 @@ const Projects = [
     description: "Project type: Web Application; Role: Lead Developer; Tech stack: React + JavaScript",
     imageSrc: "/denon.webp",
     url: "https://denonperl.vercel.app"
+  },
+  {
+    title: "Pop-a-Shot",
+    imageSrc: "/shotforshot.webp",
+    pills: [{
+      name: "Three.js",
+      url: "https://us.fernetbranca.com/shot-for-shot",
+    }],
+    url: "https://us.fernetbranca.com/shot-for-shot"
   }
 ]
 
